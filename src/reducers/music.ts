@@ -1,7 +1,18 @@
-import { SEARCH_ITEM, SEARCH_TRACK, PLAY_MUSIC, PAUSE_TRACK } from "../actions";
+import {
+  GET_PLAYLIST,
+  SEARCH_ITEM,
+  SEARCH_TRACK,
+  PLAY_MUSIC,
+  PAUSE_TRACK
+} from "../actions";
 
 export default (data = [], action: any) => {
   switch (action.type) {
+    case GET_PLAYLIST:
+      return {
+        ...data,
+        playlist: action.response.data.tracks.items
+      };
     case SEARCH_ITEM:
     case SEARCH_TRACK:
       return {

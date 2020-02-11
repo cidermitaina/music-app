@@ -6,7 +6,7 @@ import thunk from "redux-thunk";
 import reducer from "./reducers";
 
 import "./index.css";
-import App from "./App";
+import { App } from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 const enhancer = applyMiddleware(thunk);
